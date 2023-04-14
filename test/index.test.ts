@@ -32,9 +32,18 @@ describe("uni-env", () => {
         "isSSRServer",
         "isH5",
         "isApp",
+        "isAppAndroid",
+        "isAppIOS",
         "isMp",
         "isMpWeixin",
         "isMpAlipay",
+        "isMpBaidu",
+        "isMpKuaishou",
+        "isMpQQ",
+        "isMpToutiao",
+        "isQuickapp",
+        "isQuickappUnion",
+        "isQuickappHuawei",
       ]
     `);
   });
