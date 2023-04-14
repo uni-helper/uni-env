@@ -1,6 +1,6 @@
 # @uni-helper/uni-env
 
-> 检测当前 uni-app 的环境变量
+> 在 uni-app 中优雅的判断当前环境
 
 ## 安装
 
