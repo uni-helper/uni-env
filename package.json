@@ -6,12 +6,12 @@
   "description": "",
   "author": "KeJun",
   "license": "MIT",
-  "homepage": "https://github.com/kejunmao/@uni-helper/uni-env#readme",
+  "homepage": "https://github.com/uni-helper/uni-env#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kejunmao/@uni-helper/uni-env.git"
+    "url": "git+https://github.com/uni-helper/uni-env.git"
   },
-  "bugs": "https://github.com/kejunmao/@uni-helper/uni-env/issues",
+  "bugs": "https://github.com/uni-helper/uni-env/issues",
   "keywords": [],
   "sideEffects": false,
   "exports": {
