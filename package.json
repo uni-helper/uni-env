@@ -2,7 +2,7 @@
   "name": "@uni-helper/uni-env",
   "type": "module",
   "version": "0.0.3",
-  "packageManager": "pnpm@8.1.1",
+  "packageManager": "pnpm@8.6.5",
   "description": "",
   "author": "KeJun",
   "license": "MIT",
@@ -48,6 +48,6 @@
     "esno": "^0.16.3",
     "typescript": "^5.0.4",
     "unbuild": "^1.2.1",
-    "vitest": "^0.30.1"
+    "vitest": "^0.32.0"
   }
 }
