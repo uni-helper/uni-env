@@ -19,10 +19,10 @@ pnpm i @uni-helper/uni-env
 
 ```js
 // ESM
-import { isMpWeixin } from "@uni-helper/uni-env";
+import { isMpWeixin } from '@uni-helper/uni-env'
 
 // CommonJS
-const { isMp } = require("@uni-helper/uni-env");
+const { isMp } = require('@uni-helper/uni-env')
 ```
 
 你可以从 [./src/index.ts](./src/index.ts) 中查看更多标志以及如何判断的。

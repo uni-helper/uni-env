@@ -1,8 +1,8 @@
-import { expect, it, describe } from "vitest";
-import * as uniEnv from "../src";
+import { describe, expect, it } from 'vitest'
+import * as uniEnv from '../src'
 
-describe("uni-env", () => {
-  it("has all exports (dummy)", () => {
+describe('uni-env', () => {
+  it('has all exports (dummy)', () => {
     expect(Object.keys(uniEnv)).toMatchInlineSnapshot(`
       [
         "builtInPlatforms",
@@ -46,6 +46,6 @@ describe("uni-env", () => {
         "renderer",
         "rendererNative",
       ]
-    `);
-  });
-});
+    `)
+  })
+})
