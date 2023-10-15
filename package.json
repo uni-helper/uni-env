@@ -49,5 +49,8 @@
     "typescript": "^5.0.4",
     "unbuild": "^1.2.1",
     "vitest": "^0.32.0"
+  },
+  "dependencies": {
+    "std-env": "^3.4.3"
   }
 }

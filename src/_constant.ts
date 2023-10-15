@@ -1,0 +1,17 @@
+export const builtInPlatforms = [
+  'app',
+  'app-plus',
+  'h5',
+  'mp-360',
+  'mp-alipay',
+  'mp-baidu',
+  'mp-jd',
+  'mp-kuaishou',
+  'mp-lark',
+  'mp-qq',
+  'mp-toutiao',
+  'mp-weixin',
+  'quickapp-webview',
+  'quickapp-webview-huawei',
+  'quickapp-webview-union',
+] as const
