@@ -2,7 +2,7 @@
   "name": "@uni-helper/uni-env",
   "type": "module",
   "version": "0.1.0",
-  "packageManager": "pnpm@8.9.0",
+  "packageManager": "pnpm@8.9.2",
   "description": "",
   "author": "KeJun",
   "license": "MIT",
@@ -16,22 +16,19 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs"
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
     }
   },
-  "main": "./dist/index.mjs",
+  "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/*",
-        "./dist/index.d.ts"
-      ]
-    }
-  },
   "files": [
     "dist"
   ],
@@ -50,11 +47,11 @@
     "std-env": "^3.4.3"
   },
   "devDependencies": {
-    "@types/node": "^18.18.5",
+    "@types/node": "^20.8.6",
     "bumpp": "^9.2.0",
-    "esno": "^0.16.3",
+    "esno": "^0.17.0",
     "typescript": "^5.2.2",
-    "unbuild": "^1.2.1",
-    "vitest": "^0.32.4"
+    "unbuild": "^2.0.0",
+    "vitest": "^0.34.6"
   }
 }
