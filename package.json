@@ -12,7 +12,10 @@
     "url": "git+https://github.com/uni-helper/uni-env.git"
   },
   "bugs": "https://github.com/uni-helper/uni-env/issues",
-  "keywords": [],
+  "keywords": [
+    "uni-app",
+    "env"
+  ],
   "sideEffects": false,
   "exports": {
     ".": {
