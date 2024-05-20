@@ -45,7 +45,7 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@antfu/eslint-config": "1.0.0-beta.27",
+    "@antfu/eslint-config": "2.18.1",
     "eslint": "^8.51.0",
     "std-env": "^3.4.3"
   },
