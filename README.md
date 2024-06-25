@@ -1,6 +1,6 @@
 # @uni-helper/uni-env
 
-在 uni-app 中优雅的判断当前环境
+在 uni-app 中优雅地判断当前环境。
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
