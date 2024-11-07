@@ -196,7 +196,7 @@ export const cliContext = env.UNI_CLI_CONTEXT as OptionalString
  * `process.env.UNI_SUBPACKAGE`
  *
  * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L22}
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/uni-cli-shared/src/env/define.ts#L31C18-L33}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/uni-cli-shared/src/env/define.ts#L31-L33}
  */
 export const subpackage = process.env.UNI_SUBPACKAGE as OptionalString
 
@@ -204,7 +204,7 @@ export const subpackage = process.env.UNI_SUBPACKAGE as OptionalString
  * `process.env.UNI_MP_PLUGIN`
  *
  * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L23}
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/uni-cli-shared/src/env/define.ts#L28C18-L30}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/uni-cli-shared/src/env/define.ts#L28-L30}
  */
 export const mpPlugin = process.env.UNI_MP_PLUGIN as OptionalBooleanString
 
@@ -215,7 +215,7 @@ export const isMpPlugin = toBoolean(process.env.UNI_MP_PLUGIN)
  * `process.env.UNI_COMPILER_VERSION`
  *
  * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L24}
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/uni-cli-shared/src/env/define.ts#L34C18-L36}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/uni-cli-shared/src/env/define.ts#L34-L36}
  */
 export const compilerVersion = process.env.UNI_COMPILER_VERSION as OptionalString
 
@@ -293,7 +293,7 @@ export const appCodeSpliting = env.UNI_APP_CODE_SPLITING as OptionalBooleanStrin
  * `process.env.UNI_AUTOMATOR_WS_ENDPOINT`
  *
  * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L31}
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/uni-cli-shared/src/env/define.ts#L40C18-L42}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/uni-cli-shared/src/env/define.ts#L40-L42}
  */
 export const automatorWsEndpoint = process.env.UNI_AUTOMATOR_WS_ENDPOINT as OptionalString
 
@@ -301,7 +301,6 @@ export const automatorWsEndpoint = process.env.UNI_AUTOMATOR_WS_ENDPOINT as Opti
  * `process.env.UNI_AUTOMATOR_APP_WEBVIEW`
  *
  * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L32}
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/uni-cli-shared/src/env/define.ts#L40C18-L42}
  */
 export const automatorAppWebview = process.env.UNI_AUTOMATOR_APP_WEBVIEW as OptionalString
 
@@ -309,7 +308,7 @@ export const automatorAppWebview = process.env.UNI_AUTOMATOR_APP_WEBVIEW as Opti
  * `process.env.UNI_AUTOMATOR_APP_WEBVIEW_SRC`
  *
  * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L33}
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/uni-cli-shared/src/env/define.ts#L43C18-L45}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/uni-cli-shared/src/env/define.ts#L43-L45}
  */
 export const automatorAppWebviewSrc = process.env.UNI_AUTOMATOR_APP_WEBVIEW_SRC as OptionalString
 
@@ -442,7 +441,7 @@ export const appChangedPages = env.UNI_APP_CHANGED_PAGES as OptionalString
  * `process.env.VUE_APP_DARK_MODE`
  *
  * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L47}
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/uni-cli-shared/src/env/define.ts#L56C18-L58}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/uni-cli-shared/src/env/define.ts#L56-L58}
  */
 export const darkMode = process.env.VUE_APP_DARK_MODE as OptionalBooleanString
 
