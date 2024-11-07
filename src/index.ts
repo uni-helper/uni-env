@@ -302,7 +302,7 @@ export const automatorWsEndpoint = process.env.UNI_AUTOMATOR_WS_ENDPOINT as Opti
  *
  * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L32}
  */
-export const automatorAppWebview = process.env.UNI_AUTOMATOR_APP_WEBVIEW as OptionalString
+export const automatorAppWebview = env.UNI_AUTOMATOR_APP_WEBVIEW as OptionalString
 
 /**
  * `process.env.UNI_AUTOMATOR_APP_WEBVIEW_SRC`
