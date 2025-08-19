@@ -62,7 +62,7 @@
     "eslint": "^9.14.0",
     "esno": "^4.8.0",
     "typescript": "^5.6.3",
-    "unbuild": "^2.0.0",
+    "unbuild": "^3.0.0",
     "vitest": "^2.1.4"
   }
 }
