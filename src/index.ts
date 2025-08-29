@@ -71,11 +71,11 @@ export type UtsPlatform = BuiltInPlatform | 'app-android' | 'app-ios' | 'web'
  */
 export const utsPlatform = env.UNI_UTS_PLATFORM as UtsPlatform
 
-/** Detect if `process.env.UNI_PLATFORM` is `h5` */
-export const isH5 = platform === 'h5'
+/** Detect if `process.env.UNI_PLATFORM` is `h5` or if `process.env.UNI_PLATFORM` is `web` */
+export const isH5 = platform === 'h5' || platform === 'web'
 
-/** Detect if `process.env.UNI_PLATFORM` is `web` */
-export const isWeb = platform === 'web'
+/** Detect if `process.env.UNI_PLATFORM` is `web` or if `process.env.UNI_PLATFORM` is `h5` */
+export const isWeb = platform === 'web' || platform === 'h5'
 
 /** Detect if `process.env.UNI_PLATFORM` is `app` */
 export const isApp = platform === 'app'
