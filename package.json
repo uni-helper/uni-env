@@ -1,7 +1,7 @@
 {
   "name": "@uni-helper/uni-env",
   "type": "module",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "packageManager": "pnpm@9.12.3",
   "description": "在 uni-app 中优雅地判断当前环境。",
   "author": "KeJun",
