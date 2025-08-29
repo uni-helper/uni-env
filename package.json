@@ -2,7 +2,7 @@
   "name": "@uni-helper/uni-env",
   "type": "module",
   "version": "0.1.8",
-  "packageManager": "pnpm@9.12.3",
+  "packageManager": "pnpm@10.15.0",
   "description": "在 uni-app 中优雅地判断当前环境。",
   "author": "KeJun",
   "maintainers": [
@@ -27,8 +27,8 @@
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/index.d.mts",
-        "default": "./dist/index.mjs"
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
       },
       "require": {
         "types": "./dist/index.d.cts",
@@ -36,33 +36,34 @@
       }
     }
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "unbuild",
-    "dev": "unbuild --stub",
+    "build": "tsdown",
+    "dev": "tsdown --watch",
     "prepublishOnly": "pnpm build",
     "release": "bumpp",
     "start": "esno src/index.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "vitest run"
+    "test": "vitest run",
+    "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "std-env": "^3.7.0"
+    "std-env": "^3.9.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.8.0",
-    "@types/node": "^22.9.0",
-    "bumpp": "^9.8.1",
-    "eslint": "^9.14.0",
+    "@antfu/eslint-config": "^5.2.1",
+    "@types/node": "^22.18.0",
+    "bumpp": "^10.2.3",
+    "eslint": "^9.34.0",
     "esno": "^4.8.0",
-    "typescript": "^5.6.3",
-    "unbuild": "^2.0.0",
-    "vitest": "^2.1.4"
+    "tsdown": "^0.14.2",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
   }
 }
