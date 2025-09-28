@@ -13,9 +13,9 @@ export type OptionalString = string | undefined
  * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-uni-app.d.ts#L193-L211}
  * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/uni-cli-shared/src/env/define.ts#L24}
  */
-export type BuiltInPlatform = 'h5' | 'web' | 'app' | 'app-plus' | 'app-harmony' | 'mp-360' | 'mp-alipay' | 'mp-baidu' | 'mp-qq' | 'mp-toutiao' | 'mp-weixin' | 'mp-kuaishou' | 'mp-lark' | 'mp-jd' | 'mp-xhs' | 'quickapp-webview' | 'quickapp-webview-huawei' | 'quickapp-webview-union'
+export type BuiltInPlatform = 'h5' | 'web' | 'app' | 'app-plus' | 'app-harmony' | 'mp-360' | 'mp-alipay' | 'mp-baidu' | 'mp-qq' | 'mp-toutiao' | 'mp-weixin' | 'mp-kuaishou' | 'mp-lark' | 'mp-jd' | 'mp-xhs' | 'mp-harmony' | 'quickapp-webview' | 'quickapp-webview-huawei' | 'quickapp-webview-union'
 
-export const builtInPlatforms = ['h5', 'web', 'app', 'app-plus', 'app-harmony', 'mp-360', 'mp-alipay', 'mp-baidu', 'mp-qq', 'mp-toutiao', 'mp-weixin', 'mp-kuaishou', 'mp-lark', 'mp-jd', 'mp-xhs', 'quickapp-webview', 'quickapp-webview-huawei', 'quickapp-webview-union'] as BuiltInPlatform[]
+export const builtInPlatforms = ['h5', 'web', 'app', 'app-plus', 'app-harmony', 'mp-360', 'mp-alipay', 'mp-baidu', 'mp-qq', 'mp-toutiao', 'mp-weixin', 'mp-kuaishou', 'mp-lark', 'mp-jd', 'mp-xhs', 'mp-harmony', 'quickapp-webview', 'quickapp-webview-huawei', 'quickapp-webview-union'] as BuiltInPlatform[]
 
 /**
  * `process.env.UNI_PLATFORM`
@@ -112,6 +112,21 @@ export const isMpQQ = platform === 'mp-qq'
 
 /** Detect if `process.env.UNI_PLATFORM` is `mp-toutiao` */
 export const isMpToutiao = platform === 'mp-toutiao'
+
+/** Detect if `process.env.UNI_PLATFORM` is `mp-jd` */
+export const isMpJD = platform === 'mp-jd'
+
+/** Detect if `process.env.UNI_PLATFORM` is `mp-xhs` */
+export const isMpXHS = platform === 'mp-xhs'
+
+/** Detect if `process.env.UNI_PLATFORM` is `mp-harmony` */
+export const isMpHarmony = platform === 'mp-harmony'
+
+/** Detect if `process.env.UNI_PLATFORM` is `mp-360` */
+export const isMp360 = platform === 'mp-360'
+
+/** Detect if `process.env.UNI_PLATFORM` is `mp-lark` */
+export const isMpLark = platform === 'mp-lark'
 
 /** Detect if `process.env.UNI_PLATFORM` is `quickapp-webview*` */
 export const isQuickapp = /^quickapp-webview/i.test(platform)
