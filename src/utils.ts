@@ -7,7 +7,7 @@ export function parseJSON<T>(val: any) {
   try {
     obj = JSON.parse(val || '{}') as T
   }
-  catch (error) {
+  catch {
     obj = {} as T
   }
   return obj
