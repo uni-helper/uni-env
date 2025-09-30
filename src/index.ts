@@ -74,6 +74,18 @@ export const utsPlatform = env.UNI_UTS_PLATFORM as UtsPlatform
 /** Detect if `process.env.UNI_PLATFORM` is `h5` or if `process.env.UNI_PLATFORM` is `web` */
 export const isH5 = platform === 'h5' || platform === 'web'
 
+/** Get user agent string for browser detection */
+const userAgent = typeof navigator !== 'undefined' ? navigator.userAgent.toLowerCase() : ''
+
+/** Detect if running in WeChat browser in H5 environment */
+export const isH5Weixin = isH5 && /micromessenger/i.test(userAgent)
+
+/** Detect if running in Weibo client in H5 environment */
+export const isH5Weibo = isH5 && /weibo/i.test(userAgent)
+
+/** Detect if running in Alipay client in H5 environment */
+export const isH5Alipay = isH5 && /alipayclient/i.test(userAgent)
+
 /** Detect if `process.env.UNI_PLATFORM` is `web` or if `process.env.UNI_PLATFORM` is `h5` */
 export const isWeb = platform === 'web' || platform === 'h5'
 
