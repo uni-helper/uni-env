@@ -2,7 +2,7 @@
   "name": "@uni-helper/uni-env",
   "type": "module",
   "version": "0.2.0",
-  "packageManager": "pnpm@10.15.0",
+  "packageManager": "pnpm@10.33.4",
   "description": "在 uni-app 中优雅地判断当前环境。",
   "author": "KeJun",
   "maintainers": [
@@ -54,16 +54,16 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "std-env": "^3.9.0"
+    "std-env": "^3.10.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^5.2.1",
-    "@types/node": "^22.18.0",
-    "bumpp": "^10.2.3",
-    "eslint": "^9.34.0",
+    "@antfu/eslint-config": "^8.2.0",
+    "@types/node": "^24.12.3",
+    "bumpp": "^11.1.0",
+    "eslint": "^10.3.0",
     "esno": "^4.8.0",
-    "tsdown": "^0.14.2",
-    "typescript": "^5.9.2",
-    "vitest": "^3.2.4"
+    "tsdown": "^0.22.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.5"
   }
 }
