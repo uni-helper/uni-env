@@ -8,66 +8,66 @@ export type OptionalString = string | undefined
 /**
  * `process.env.UNI_PLATFORM`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L9}
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-uni-app.d.ts#L24}
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-uni-app.d.ts#L193-L211}
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/uni-cli-shared/src/env/define.ts#L24}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L9}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-uni-app.d.ts#L24}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-uni-app.d.ts#L193-L211}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/uni-cli-shared/src/env/define.ts#L24}
  */
-export type BuiltInPlatform = 'h5' | 'web' | 'app' | 'app-plus' | 'app-harmony' | 'mp-360' | 'mp-alipay' | 'mp-baidu' | 'mp-qq' | 'mp-toutiao' | 'mp-weixin' | 'mp-kuaishou' | 'mp-lark' | 'mp-jd' | 'mp-xhs' | 'mp-harmony' | 'quickapp-webview' | 'quickapp-webview-huawei' | 'quickapp-webview-union'
+export type BuiltInPlatform = 'h5' | 'web' | 'app' | 'app-plus' | 'app-android' | 'app-ios' | 'app-harmony' | 'mp-360' | 'mp-alipay' | 'mp-baidu' | 'mp-qq' | 'mp-toutiao' | 'mp-weixin' | 'mp-kuaishou' | 'mp-lark' | 'mp-jd' | 'mp-xhs' | 'mp-harmony' | 'quickapp-webview' | 'quickapp-webview-huawei' | 'quickapp-webview-union'
 
-export const builtInPlatforms = ['h5', 'web', 'app', 'app-plus', 'app-harmony', 'mp-360', 'mp-alipay', 'mp-baidu', 'mp-qq', 'mp-toutiao', 'mp-weixin', 'mp-kuaishou', 'mp-lark', 'mp-jd', 'mp-xhs', 'mp-harmony', 'quickapp-webview', 'quickapp-webview-huawei', 'quickapp-webview-union'] as BuiltInPlatform[]
+export const builtInPlatforms = ['h5', 'web', 'app', 'app-plus', 'app-android', 'app-ios', 'app-harmony', 'mp-360', 'mp-alipay', 'mp-baidu', 'mp-qq', 'mp-toutiao', 'mp-weixin', 'mp-kuaishou', 'mp-lark', 'mp-jd', 'mp-xhs', 'mp-harmony', 'quickapp-webview', 'quickapp-webview-huawei', 'quickapp-webview-union'] as BuiltInPlatform[]
 
 /**
  * `process.env.UNI_PLATFORM`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L9}
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-uni-app.d.ts#L24}
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-uni-app.d.ts#L193-L211}
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/uni-cli-shared/src/env/define.ts#L24}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L9}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-uni-app.d.ts#L24}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-uni-app.d.ts#L193-L211}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/uni-cli-shared/src/env/define.ts#L24}
  */
 export const platform = process.env.UNI_PLATFORM as BuiltInPlatform
 
 /**
  * `process.env.UNI_APP_PLATFORM`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L10}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L10}
  */
 export type AppPlatform = 'android' | 'ios' | 'harmony' | undefined
 
 /**
  * `process.env.UNI_APP_PLATFORM`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L10}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L10}
  */
 export const appPlatform = env.UNI_APP_PLATFORM as AppPlatform
 
 /**
  * `process.env.UNI_SUB_PLATFORM`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L11}
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/uni-cli-shared/src/env/define.ts#L25-L27}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L11}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/uni-cli-shared/src/env/define.ts#L25-L27}
  */
 export type SubPlatform = 'quickapp-webview-huawei' | 'quickapp-webview-union' | undefined
 
 /**
  * `process.env.UNI_SUB_PLATFORM`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L11}
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/uni-cli-shared/src/env/define.ts#L25-L27}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L11}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/uni-cli-shared/src/env/define.ts#L25-L27}
  */
 export const subPlatform = process.env.UNI_SUB_PLATFORM as SubPlatform
 
 /**
  * `process.env.UNI_UTS_PLATFORM`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L12}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L12}
  */
-export type UtsPlatform = BuiltInPlatform | 'app-android' | 'app-ios' | 'web'
+export type UtsPlatform = BuiltInPlatform | 'web'
 
 /**
  * `process.env.UNI_UTS_PLATFORM`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L12}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L12}
  */
 export const utsPlatform = env.UNI_UTS_PLATFORM as UtsPlatform
 
@@ -152,88 +152,88 @@ export const isQuickappHuawei = platform === 'quickapp-webview-huawei'
 /**
  * `process.env.UNI_UTS_JS_CODE_FORMAT`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L14}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L14}
  */
 export type UtsJsCodeFormat = 'cjs' | 'es' | undefined
 
 /**
  * `process.env.UNI_UTS_JS_CODE_FORMAT`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L14}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L14}
  */
 export const utsJsCodeFormat = env.UNI_UTS_JS_CODE_FORMAT as UtsJsCodeFormat
 
 /**
  * `process.env.UNI_UTS_MODULE_TYPE`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L15}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L15}
  */
 export type UtsModuleType = 'built-in' | '' | undefined
 
 /**
  * `process.env.UNI_UTS_MODULE_TYPE`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L15}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L15}
  */
 export const utsModuleType = env.UNI_UTS_MODULE_TYPE as UtsModuleType
 
 /**
  * `process.env.UNI_UTS_MODULE_PREFIX`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L16}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L16}
  */
 export const utsModulePrefix = env.UNI_UTS_MODULE_PREFIX as OptionalString
 
 /**
  * `process.env.UNI_UTS_TARGET_LANGUAGE`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L17}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L17}
  */
 export type UtsTargetLanguage = 'javascript' | 'kotlin' | 'swift' | 'arkts' | undefined
 
 /**
  * `process.env.UNI_UTS_TARGET_LANGUAGE`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L17}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L17}
  */
 export const utsTargetLanguage = env.UNI_UTS_TARGET_LANGUAGE as UtsTargetLanguage
 
 /**
  * `process.env.UNI_INPUT_DIR`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L19}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L19}
  */
 export const inputDir = env.UNI_INPUT_DIR as OptionalString
 
 /**
  * `process.env.UNI_OUTPUT_DIR`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L20}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L20}
  */
 export const outputDir = env.UNI_OUTPUT_DIR as OptionalString
 
 /**
  * `process.env.UNI_CLI_CONTEXT`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L21}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L21}
  */
 export const cliContext = env.UNI_CLI_CONTEXT as OptionalString
 
 /**
  * `process.env.UNI_SUBPACKAGE`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L22}
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/uni-cli-shared/src/env/define.ts#L31-L33}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L22}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/uni-cli-shared/src/env/define.ts#L31-L33}
  */
 export const subpackage = process.env.UNI_SUBPACKAGE as OptionalString
 
 /**
  * `process.env.UNI_MP_PLUGIN`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L23}
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/uni-cli-shared/src/env/define.ts#L28-L30}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L23}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/uni-cli-shared/src/env/define.ts#L28-L30}
  */
-export const mpPlugin = process.env.UNI_MP_PLUGIN as OptionalBooleanString
+export const mpPlugin = process.env.UNI_MP_PLUGIN as OptionalString
 
 /** Detect if `process.env.UNI_MP_PLUGIN` is set */
 export const isMpPlugin = toBoolean(process.env.UNI_MP_PLUGIN)
@@ -241,150 +241,150 @@ export const isMpPlugin = toBoolean(process.env.UNI_MP_PLUGIN)
 /**
  * `process.env.UNI_COMPILER_VERSION`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L24}
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/uni-cli-shared/src/env/define.ts#L34-L36}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L24}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/uni-cli-shared/src/env/define.ts#L34-L36}
  */
 export const compilerVersion = process.env.UNI_COMPILER_VERSION as OptionalString
 
 /**
  * `process.env.UNI_COMPILER_VERSION_TYPE`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L25}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L25}
  */
 export type CompilerVersionType = 'a' | 'r' | undefined
 
 /**
  * `process.env.UNI_COMPILER_VERSION_TYPE`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L25}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L25}
  */
 export const compilerVersionType = env.UNI_COMPILER_VERSION_TYPE as CompilerVersionType
 
 /**
  * `process.env.UNI_HBUILDERX_PLUGINS`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L26}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L26}
  */
 export const hbuilderxPlugins = env.UNI_HBUILDERX_PLUGINS as OptionalString
 
 /**
  * `process.env.UNI_RENDERER`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L27}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L27}
  */
 export type Renderer = 'native' | undefined
 
 /**
  * `process.env.UNI_RENDERER`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L27}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L27}
  */
 export const renderer = env.UNI_RENDERER as Renderer
 
 /**
  * `process.env.UNI_NVUE_COMPILER`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L28}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L28}
  */
 export type NVueCompiler = 'uni-app' | 'weex' | 'vue' | 'vite' | undefined
 
 /**
  * `process.env.UNI_NVUE_COMPILER`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L28}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L28}
  */
 export const nvueCompiler = env.UNI_NVUE_COMPILER as NVueCompiler
 
 /**
  * `process.env.UNI_NVUE_STYLE_COMPILER`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L29}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L29}
  */
 export type NVueStyleCompiler = 'uni-app' | 'weex' | undefined
 
 /**
  * `process.env.UNI_NVUE_STYLE_COMPILER`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L29}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L29}
  */
 export const nvueStyleCompiler = env.UNI_NVUE_STYLE_COMPILER as NVueStyleCompiler
 
 /**
  * `process.env.UNI_APP_CODE_SPLITING`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L30}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L30}
  */
-export const appCodeSpliting = env.UNI_APP_CODE_SPLITING as OptionalBooleanString
+export const appCodeSplitting = env.UNI_APP_CODE_SPLITING as OptionalBooleanString
 
 /**
  * `process.env.UNI_AUTOMATOR_WS_ENDPOINT`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L31}
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/uni-cli-shared/src/env/define.ts#L40-L42}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L31}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/uni-cli-shared/src/env/define.ts#L40-L42}
  */
 export const automatorWsEndpoint = process.env.UNI_AUTOMATOR_WS_ENDPOINT as OptionalString
 
 /**
  * `process.env.UNI_AUTOMATOR_APP_WEBVIEW`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L32}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L32}
  */
 export const automatorAppWebview = env.UNI_AUTOMATOR_APP_WEBVIEW as OptionalString
 
 /**
  * `process.env.UNI_AUTOMATOR_APP_WEBVIEW_SRC`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L33}
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/uni-cli-shared/src/env/define.ts#L43-L45}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L33}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/uni-cli-shared/src/env/define.ts#L43-L45}
  */
 export const automatorAppWebviewSrc = process.env.UNI_AUTOMATOR_APP_WEBVIEW_SRC as OptionalString
 
 /**
  * `process.env.UNI_H5_BASE`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L34}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L34}
  */
 export const h5Base = env.UNI_H5_BASE as OptionalString
 
 /**
  * `process.env.UNI_H5_BROWSER`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L35}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L35}
  */
 export type H5Browser = 'builtin' | undefined
 
 /**
  * `process.env.UNI_H5_BROWSER`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L35}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L35}
  */
 export const h5Browser = env.UNI_H5_BROWSER as H5Browser
 
 /**
  * `process.env.UNI_CUSTOM_SCRIPT`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L36}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L36}
  */
 export const customScript = env.UNI_CUSTOM_SCRIPT as OptionalString
 
 /**
  * `process.env.UNI_CUSTOM_DEFINE`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L37}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L37}
  */
 export const customDefine = env.UNI_CUSTOM_DEFINE as OptionalString
 
 /**
  * `process.env.UNI_CUSTOM_CONTEXT`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L38}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L38}
  */
 export const customContext = env.UNI_CUSTOM_CONTEXT as OptionalString
 
 /**
  * `process.env.UNI_MINIMIZE`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L39}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L39}
  */
 export const minimize = env.UNI_MINIMIZE as OptionalBooleanString
 
@@ -394,7 +394,7 @@ export const isMinimize = toBoolean(env.UNI_MINIMIZE)
 /**
  * `process.env.UNI_UVUE`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L40}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L40}
  */
 export const uvue = env.UNI_UVUE as OptionalBooleanString
 
@@ -404,71 +404,71 @@ export const isUVue = toBoolean(env.UNI_UVUE)
 /**
  * `process.env.UNI_UVUE_TARGET_LANGUAGE`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L41}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L41}
  */
 export type UVueTargetLanguage = 'kotlin' | 'swift' | 'javascript' | undefined
 
 /**
  * `process.env.UNI_UVUE_TARGET_LANGUAGE`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L41}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L41}
  */
 export const uvueTargetLanguage = env.UNI_UVUE_TARGET_LANGUAGE as UVueTargetLanguage
 
 /**
  * `process.env.UNI_COMPILER`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L42}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L42}
  */
 export type Compiler = 'vue' | 'nvue' | undefined
 
 /**
  * `process.env.UNI_COMPILER`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L42}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L42}
  */
 export const compiler = env.UNI_COMPILER as Compiler
 
 /**
  * `process.env.UNI_RENDERER_NATIVE`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L43}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L43}
  */
 export type RendererNative = 'appService' | 'pages' | undefined
 
 /**
  * `process.env.UNI_RENDERER_NATIVE`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L43}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L43}
  */
 export const rendererNative = env.UNI_RENDERER_NATIVE as RendererNative
 
 /**
  * `process.env.UNI_NVUE_APP_STYLES`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L44}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L44}
  */
 export const nvueAppStyles = env.UNI_NVUE_APP_STYLES as OptionalString
 
 /**
  * `process.env.UNI_APP_CHANGED_FILES`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L45}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L45}
  */
 export const appChangedFiles = env.UNI_APP_CHANGED_FILES as OptionalString
 
 /**
  * `process.env.UNI_APP_CHANGED_PAGES`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L46}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L46}
  */
 export const appChangedPages = env.UNI_APP_CHANGED_PAGES as OptionalString
 
 /**
  * `process.env.VUE_APP_DARK_MODE`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L47}
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/uni-cli-shared/src/env/define.ts#L56-L58}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L47}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/uni-cli-shared/src/env/define.ts#L56-L58}
  */
 export const darkMode = process.env.VUE_APP_DARK_MODE as OptionalBooleanString
 
@@ -478,28 +478,28 @@ export const hasDarkMode = toBoolean(process.env.VUE_APP_DARK_MODE)
 /**
  * `process.env.HX_USE_BASE_TYPE`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L48}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L48}
  */
 export type HxUseBaseType = 'standard' | 'custom' | undefined
 
 /**
  * `process.env.HX_USE_BASE_TYPE`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L48}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L48}
  */
 export const hxUseBaseType = env.HX_USE_BASE_TYPE as HxUseBaseType
 
 /**
  * `process.env.HX_DEPENDENCIES_DIR`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L49}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L49}
  */
 export const hxDependenciesDir = env.HX_DEPENDENCIES_DIR as OptionalString
 
 /**
  * `process.env.UNI_APP_X`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L55}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L55}
  */
 export const appX = env.UNI_APP_X as OptionalBooleanString
 
@@ -509,105 +509,105 @@ export const isAppX = toBoolean(env.UNI_APP_X)
 /**
  * `process.env.UNI_APP_X_CACHE_DIR`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L56}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L56}
  */
 export const appXCacheDir = env.UNI_APP_X_CACHE_DIR as OptionalString
 
 /**
  * `process.env.HX_VERSION`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L58}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L58}
  */
 export const hxVersion = env.HX_VERSION as OptionalString
 
 /**
  * `process.env.UNI_APP_X_PAGE_COUNT`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L60}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L60}
  */
 export const appXPageCount = env.UNI_APP_X_PAGE_COUNT as OptionalString
 
 /**
  * `process.env.UNI_APP_X_TSC`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L61}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L61}
  */
 export const appXTsc = env.UNI_APP_X_TSC as OptionalString
 
 /**
  * `process.env.UNI_APP_X_SINGLE_THREAD`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L62}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L62}
  */
 export const appXSingleThread = env.UNI_APP_X_SINGLE_THREAD as OptionalString
 
 /**
  * `process.env.UNI_APP_X_SETUP`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L63}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L63}
  */
 export const appXSetup = env.UNI_APP_X_SETUP as OptionalString
 
 /**
  * `process.env.UNI_APP_X_UVUE_SCRIPT_ENGINE`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L64}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L64}
  */
 export type AppXUVueScriptEngine = 'native' | 'js' | undefined
 
 /**
  * `process.env.UNI_APP_X_UVUE_SCRIPT_ENGINE`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L64}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L64}
  */
 export const appXUVueScriptEngine = env.UNI_APP_X_UVUE_SCRIPT_ENGINE as AppXUVueScriptEngine
 
 /**
  * `process.env.UNI_COMPILE_TARGET`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L66}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L66}
  */
-export type CompileTarget = 'uni_modules' | undefined
+export type CompileTarget = 'uni_modules' | 'ext-api' | undefined
 
 /**
  * `process.env.UNI_COMPILE_TARGET`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L66}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L66}
  */
 export const compileTarget = env.UNI_COMPILE_TARGET as CompileTarget
 
 /**
  * `process.env.UNI_COMPILE_CLOUD_DIR`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L67}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L67}
  */
 export const compileCloudDir = env.UNI_COMPILE_CLOUD_DIR as OptionalString
 
 /**
  * `process.env.UNI_MODULES_ENCRYPT_CACHE_DIR`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L68}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L68}
  */
 export const modulesEncryptCacheDir = env.UNI_MODULES_ENCRYPT_CACHE_DIR as OptionalString
 
 /**
  * `process.env.UNI_APP_PACK_TYPE`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L70}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L70}
  */
 export type AppPackType = 'release' | 'debug' | undefined
 
 /**
  * `process.env.UNI_APP_PACK_TYPE`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L70}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L70}
  */
 export const appPackType = env.UNI_APP_PACK_TYPE as AppPackType
 
 /**
  * `process.env.UNI_APP_HARMONY_PROJECT_PATH`
  *
- * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-4020920240930001/packages/shims-node.d.ts#L72}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L72}
  */
 export const appHarmonyProjectPath = env.UNI_APP_HARMONY_PROJECT_PATH as OptionalString
 
@@ -632,3 +632,265 @@ export const ssrServer = env.UNI_SSR_SERVER as OptionalBooleanString
 
 /** Detect if `process.env.UNI_SSR_SERVER` is set  */
 export const isSSRServer = toBoolean(env.UNI_SSR_SERVER)
+
+// New in v3.0.0-5000720260410001
+
+/**
+ * `process.env.UNI_APP_OUTPUT_FORMAT`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L26}
+ */
+export type AppOutputFormat = 'esm' | undefined
+
+/**
+ * `process.env.UNI_APP_OUTPUT_FORMAT`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L26}
+ */
+export const appOutputFormat = env.UNI_APP_OUTPUT_FORMAT as AppOutputFormat
+
+/**
+ * `process.env.UNI_APP_DYNAMIC_IMPORT`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L27}
+ */
+export const appDynamicImport = env.UNI_APP_DYNAMIC_IMPORT as OptionalBooleanString
+
+/** Detect if `process.env.UNI_APP_DYNAMIC_IMPORT` is set */
+export const isAppDynamicImport = toBoolean(env.UNI_APP_DYNAMIC_IMPORT)
+
+/**
+ * `process.env.UNI_APP_X_VAPOR`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L46}
+ */
+export const appXVapor = env.UNI_APP_X_VAPOR as OptionalBooleanString
+
+/** Detect if `process.env.UNI_APP_X_VAPOR` is set */
+export const isAppXVapor = toBoolean(env.UNI_APP_X_VAPOR)
+
+/**
+ * `process.env.UNI_APP_STYLE_ISOLATION_VERSION`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L47}
+ */
+export const appStyleIsolationVersion = env.UNI_APP_STYLE_ISOLATION_VERSION as OptionalString
+
+/**
+ * `process.env.UNI_APP_X_TSC_DIR`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L53}
+ */
+export const appXTscDir = env.UNI_APP_X_TSC_DIR as OptionalString
+
+/**
+ * `process.env.UNI_APP_X_TSC_CACHE_DIR`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L54}
+ */
+export const appXTscCacheDir = env.UNI_APP_X_TSC_CACHE_DIR as OptionalString
+
+/**
+ * `process.env.UNI_APP_X_UVUE_DIR`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L55}
+ */
+export const appXUvueDir = env.UNI_APP_X_UVUE_DIR as OptionalString
+
+/**
+ * `process.env.UNI_APP_HARMONY_RUN_MODE`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L65}
+ */
+export const appHarmonyRunMode = env.UNI_APP_HARMONY_RUN_MODE as OptionalString
+
+/**
+ * `process.env.UNI_COMPILE_EXT_API_INPUT`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L67}
+ */
+export const compileExtApiInput = env.UNI_COMPILE_EXT_API_INPUT as OptionalString
+
+/**
+ * `process.env.UNI_APP_NEXT_WORKSPACE`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L68}
+ */
+export const appNextWorkspace = env.UNI_APP_NEXT_WORKSPACE as OptionalString
+
+/**
+ * `process.env.UNI_CONSOLE_KEEP_ORIGINAL`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L71}
+ */
+export const consoleKeepOriginal = env.UNI_CONSOLE_KEEP_ORIGINAL as OptionalString
+
+/**
+ * `process.env.UNI_APP_SOURCEMAP`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L80}
+ */
+export const appSourcemap = env.UNI_APP_SOURCEMAP as OptionalBooleanString
+
+/** Detect if `process.env.UNI_APP_SOURCEMAP` is set */
+export const hasAppSourcemap = toBoolean(env.UNI_APP_SOURCEMAP)
+
+/**
+ * `process.env.UNI_APP_PRODUCTION_TYPE`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L83}
+ */
+export const appProductionType = env.UNI_APP_PRODUCTION_TYPE as OptionalString
+
+/**
+ * `process.env.UNI_APP_X_DOM2`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L85}
+ */
+export const appXDom2 = env.UNI_APP_X_DOM2 as OptionalBooleanString
+
+/** Detect if `process.env.UNI_APP_X_DOM2` is set */
+export const isAppXDom2 = toBoolean(env.UNI_APP_X_DOM2)
+
+/**
+ * `process.env.UNI_CLI_LAUNCH_PAGE_PATH`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L86}
+ */
+export const cliLaunchPagePath = env.UNI_CLI_LAUNCH_PAGE_PATH as OptionalString
+
+/**
+ * `process.env.UNI_CLI_LAUNCH_PAGE_QUERY`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L87}
+ */
+export const cliLaunchPageQuery = env.UNI_CLI_LAUNCH_PAGE_QUERY as OptionalString
+
+/**
+ * `process.env.UNI_SCRIPT`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L88}
+ */
+export const script = env.UNI_SCRIPT as OptionalString
+
+/**
+ * `process.env.UNI_HBUILDERX_LANGID`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L89}
+ */
+export const hbuilderxLangId = env.UNI_HBUILDERX_LANGID as OptionalString
+
+/**
+ * `process.env.UNI_SUBPACKGE`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L98}
+ */
+export const subpackge = env.UNI_SUBPACKGE as OptionalString
+
+/**
+ * `process.env.UNI_CLOUD_SPACES`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L100}
+ */
+export const cloudSpaces = env.UNI_CLOUD_SPACES as OptionalString
+
+/**
+ * `process.env.UNICLOUD_DEBUG`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L101}
+ */
+export const unicloudDebug = env.UNICLOUD_DEBUG as OptionalString
+
+/** Detect if `process.env.UNICLOUD_DEBUG` is set */
+export const isUnicloudDebug = toBoolean(env.UNICLOUD_DEBUG)
+
+/**
+ * `process.env.UNICLOUD_DEBUGGER_PATH`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L102}
+ */
+export const unicloudDebuggerPath = env.UNICLOUD_DEBUGGER_PATH as OptionalString
+
+/**
+ * `process.env.UNI_SECURE_NETWORK_CONFIG`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L103}
+ */
+export const secureNetworkConfig = env.UNI_SECURE_NETWORK_CONFIG as OptionalString
+
+/**
+ * `process.env.UNI_SECURE_NETWORK_ENABLE`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L104}
+ */
+export const secureNetworkEnable = env.UNI_SECURE_NETWORK_ENABLE as OptionalString
+
+/**
+ * `process.env.HX_RUN_DEVICE_TYPE`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L106}
+ */
+export const hxRunDeviceType = env.HX_RUN_DEVICE_TYPE as OptionalString
+
+/**
+ * `process.env.UNI_AUTOMATOR_COMPILE`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L109}
+ */
+export const automatorCompile = env.UNI_AUTOMATOR_COMPILE as OptionalString
+
+/**
+ * `process.env.UNI_AUTOMATOR_CONFIG`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L110}
+ */
+export const automatorConfig = env.UNI_AUTOMATOR_CONFIG as OptionalString
+
+/**
+ * `process.env.UNI_AUTOMATOR_HOST`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L111}
+ */
+export const automatorHost = env.UNI_AUTOMATOR_HOST as OptionalString
+
+/**
+ * `process.env.UNI_AUTOMATOR_PORT`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L112}
+ */
+export const automatorPort = env.UNI_AUTOMATOR_PORT as OptionalString
+
+/**
+ * `process.env.UNI_OS_NAME`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L114}
+ */
+export const osName = env.UNI_OS_NAME as OptionalString
+
+/**
+ * `process.env.UNI_SOCKET_ID`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L116}
+ */
+export const socketId = env.UNI_SOCKET_ID as OptionalString
+
+/**
+ * `process.env.UNI_SOCKET_PORT`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L117}
+ */
+export const socketPort = env.UNI_SOCKET_PORT as OptionalString
+
+/**
+ * `process.env.UNI_SOCKET_HOSTS`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L118}
+ */
+export const socketHosts = env.UNI_SOCKET_HOSTS as OptionalString
+
+/**
+ * `process.env.UNI_CONSOLE_WEBVIEW`
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L121}
+ */
+export const consoleWebview = env.UNI_CONSOLE_WEBVIEW as OptionalString
