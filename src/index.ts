@@ -2,6 +2,22 @@ import { env } from 'std-env'
 /* eslint-disable node/prefer-global/process */
 import { parseJSON, toBoolean } from './utils'
 
+/**
+ * 环境变量读取规则
+ *
+ * uni-app 构建时通过 Vite `define` 静态替换一批 `process.env.*` 字面量，
+ * 注册表见 uni-app `packages/uni-cli-shared/src/env/define.ts` 的 `initDefine`。
+ *
+ * - 已注册的键用 `process.env.X`：构建期被替换为字面量，所有目标（Node/H5/小程序）
+ *   都拿到正确值，且能触发 dead-code elimination，裁掉其它平台的死代码。
+ * - 未注册的键用 std-env 的 `env.X`：不会静态替换，运行时经 Proxy 回退读取
+ *   （`process?.env → import.meta.env → Deno → __env__ → globalThis`），
+ *   避免在没有 `process` 全局的环境抛 `process is not defined`。这类变量通常只在
+ *   Node CLI/SSR 上下文有意义，在浏览器/小程序运行时为 `undefined`。
+ *
+ * 误用后果：未注册键写成 `process.env.X` 会在无 `process` 全局的运行时报错；
+ * 已注册键写成 `env.X` 读不到构建期注入的值且无法被 tree-shaking。
+ */
 export type OptionalBooleanString = 'true' | 'false' | undefined
 export type OptionalString = string | undefined
 
@@ -26,6 +42,15 @@ export const builtInPlatforms = ['h5', 'web', 'app', 'app-plus', 'app-android', 
  * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/uni-cli-shared/src/env/define.ts#L24}
  */
 export const platform = process.env.UNI_PLATFORM as BuiltInPlatform
+
+/**
+ * `process.env.VUE_APP_PLATFORM`
+ *
+ * uni-app 为兼容旧版本注入的 `UNI_PLATFORM` 别名。
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/uni-cli-shared/src/env/define.ts#L81-L83}
+ */
+export const vueAppPlatform = process.env.VUE_APP_PLATFORM as BuiltInPlatform | ''
 
 /**
  * `process.env.UNI_APP_PLATFORM`
@@ -103,6 +128,51 @@ export const isAppAndroid = appPlatform === 'android' || utsPlatform === 'app-an
 
 /** Detect if `process.env.UNI_APP_PLATFORM` is `ios` or if `process.env.UNI_UTS_PLATFORM` is `app-ios` */
 export const isAppIOS = appPlatform === 'ios' || utsPlatform === 'app-ios'
+
+/**
+ * `process.env.UNI_DEBUG`
+ *
+ * uni-app 注入为布尔字面量（`initDefine()` 未传 `stringifyBoolean`），取自 manifest 的 `debug` 字段。
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/uni-cli-shared/src/env/define.ts#L41-L43}
+ */
+export const debug = process.env.UNI_DEBUG as unknown as boolean
+
+/**
+ * `process.env.UNI_APP_ID`
+ *
+ * uni-app 注入为字符串，取自 manifest 的 `appid` 字段，未配置时为空字符串。
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/uni-cli-shared/src/env/define.ts#L44}
+ */
+export const appId = process.env.UNI_APP_ID as string
+
+/**
+ * `process.env.UNI_APP_NAME`
+ *
+ * uni-app 注入为字符串，取自 manifest 的 `name` 字段，未配置时为空字符串。
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/uni-cli-shared/src/env/define.ts#L45}
+ */
+export const appName = process.env.UNI_APP_NAME as string
+
+/**
+ * `process.env.UNI_APP_VERSION_NAME`
+ *
+ * uni-app 注入为字符串，取自 manifest 的 `versionName` 字段，未配置时为空字符串。
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/uni-cli-shared/src/env/define.ts#L46-L48}
+ */
+export const appVersionName = process.env.UNI_APP_VERSION_NAME as string
+
+/**
+ * `process.env.UNI_APP_VERSION_CODE`
+ *
+ * uni-app 注入为字符串，取自 manifest 的 `versionCode` 字段，未配置时为空字符串。
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/uni-cli-shared/src/env/define.ts#L49-L51}
+ */
+export const appVersionCode = process.env.UNI_APP_VERSION_CODE as string
 
 /** Detect if `process.env.UNI_PLATFORM` is `mp-*` */
 export const isMp = /^mp-/i.test(platform)
@@ -245,6 +315,15 @@ export const isMpPlugin = toBoolean(process.env.UNI_MP_PLUGIN)
  * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/uni-cli-shared/src/env/define.ts#L34-L36}
  */
 export const compilerVersion = process.env.UNI_COMPILER_VERSION as OptionalString
+
+/**
+ * `process.env.RUN_BY_HBUILDERX`
+ *
+ * uni-app 注入为布尔字面量（`initDefine()` 未传 `stringifyBoolean`）。
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/uni-cli-shared/src/env/define.ts#L65-L67}
+ */
+export const runByHBuilderX = process.env.RUN_BY_HBUILDERX as unknown as boolean
 
 /**
  * `process.env.UNI_COMPILER_VERSION_TYPE`
@@ -677,6 +756,16 @@ export const isAppXVapor = toBoolean(env.UNI_APP_X_VAPOR)
 export const appStyleIsolationVersion = env.UNI_APP_STYLE_ISOLATION_VERSION as OptionalString
 
 /**
+ * `process.env.UNI_APP_X_NEW_STYLE_ISOLATION`
+ *
+ * uni-app 注入为布尔字面量（`initDefine()` 未传 `stringifyBoolean`），指示是否启用新版样式隔离。
+ * 注释说明该键主要为 web/ssr 服务，因为 ssr 目前只能识别 `process.env` 中的内容。
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/uni-cli-shared/src/env/define.ts#L95-L96}
+ */
+export const appXNewStyleIsolation = process.env.UNI_APP_X_NEW_STYLE_ISOLATION as unknown as boolean
+
+/**
  * `process.env.UNI_APP_X_TSC_DIR`
  *
  * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L53}
@@ -795,21 +884,31 @@ export const subpackge = env.UNI_SUBPACKGE as OptionalString
 export const cloudSpaces = env.UNI_CLOUD_SPACES as OptionalString
 
 /**
+ * `process.env.UNI_CLOUD_PROVIDER`
+ *
+ * uni-app 注入为字符串，未配置时为空字符串。
+ *
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/uni-cli-shared/src/env/define.ts#L74-L76}
+ */
+export const cloudProvider = process.env.UNI_CLOUD_PROVIDER as string
+
+/**
  * `process.env.UNICLOUD_DEBUG`
  *
  * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L101}
+ * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/uni-cli-shared/src/env/define.ts#L77-L79}
  */
-export const unicloudDebug = env.UNICLOUD_DEBUG as OptionalString
+export const unicloudDebug = process.env.UNICLOUD_DEBUG as OptionalString
 
 /** Detect if `process.env.UNICLOUD_DEBUG` is set */
-export const isUnicloudDebug = toBoolean(env.UNICLOUD_DEBUG)
+export const isUnicloudDebug = toBoolean(process.env.UNICLOUD_DEBUG)
 
 /**
  * `process.env.UNICLOUD_DEBUGGER_PATH`
  *
  * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L102}
  */
-export const unicloudDebuggerPath = env.UNICLOUD_DEBUGGER_PATH as OptionalString
+export const unicloudDebuggerPath = process.env.UNICLOUD_DEBUGGER_PATH as OptionalString
 
 /**
  * `process.env.UNI_SECURE_NETWORK_CONFIG`
