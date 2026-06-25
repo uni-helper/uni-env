@@ -1,11 +1,14 @@
 <a href="https://uni-helper.js.org/uni-env"><img src="./banner.svg" alt="banner" width="100%"/></a>
 
-<br >
-<a href="https://github.com/uni-helper/uni-env/stargazers"><img src="https://img.shields.io/github/stars/uni-helper/uni-env?colorA=005947&colorB=eee&style=for-the-badge"></a>
-<a href="https://www.npmjs.com/package/@uni-helper/uni-env"><img src="https://img.shields.io/npm/dm/@uni-helper/uni-env?colorA=005947&colorB=eee&style=for-the-badge"></a>
-<a href="https://www.npmjs.com/package/@uni-helper/uni-env"><img src="https://img.shields.io/npm/v/@uni-helper/uni-env?colorA=005947&colorB=eee&style=for-the-badge"></a>
+<p style="text-align: center">
+  <a href="https://github.com/uni-helper/uni-env/stargazers"><img src="https://img.shields.io/github/stars/uni-helper/uni-env?colorA=005947&colorB=eee&style=for-the-badge"></a>
+  <a href="https://www.npmjs.com/package/@uni-helper/uni-env"><img src="https://img.shields.io/npm/dm/@uni-helper/uni-env?colorA=005947&colorB=eee&style=for-the-badge"></a>
+  <a href="https://www.npmjs.com/package/@uni-helper/uni-env"><img src="https://img.shields.io/npm/v/@uni-helper/uni-env?colorA=005947&colorB=eee&style=for-the-badge"></a>
+</p>
 
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/uni-helper/uni-env)
+<p style="text-align: center">
+  <a href="https://deepwiki.com/uni-helper/uni-env"><img src="https://deepwiki.com/badge.svg"></a>
+</p>
 
 在 uni-app 中优雅地判断当前环境。
 
