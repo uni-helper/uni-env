@@ -903,12 +903,13 @@ export const unicloudDebug = process.env.UNICLOUD_DEBUG as OptionalString
 /** Detect if `process.env.UNICLOUD_DEBUG` is set */
 export const isUnicloudDebug = toBoolean(process.env.UNICLOUD_DEBUG)
 
+// 实际上没有导出
 /**
  * `process.env.UNICLOUD_DEBUGGER_PATH`
  *
  * @link {https://github.com/dcloudio/uni-app/blob/v3.0.0-5000720260410001/packages/shims-node.d.ts#L102}
  */
-export const unicloudDebuggerPath = process.env.UNICLOUD_DEBUGGER_PATH as OptionalString
+// export const unicloudDebuggerPath = process.env.UNICLOUD_DEBUGGER_PATH as OptionalString
 
 /**
  * `process.env.UNI_SECURE_NETWORK_CONFIG`

@@ -130,7 +130,7 @@ describe('uni-env', () => {
         "cloudProvider",
         "unicloudDebug",
         "isUnicloudDebug",
-        "unicloudDebuggerPath",
+        // "unicloudDebuggerPath",
         "secureNetworkConfig",
         "secureNetworkEnable",
         "hxRunDeviceType",
