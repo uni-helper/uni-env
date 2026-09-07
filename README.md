@@ -5,12 +5,16 @@
   <a href="https://www.npmjs.com/package/@uni-helper/uni-env"><img src="https://img.shields.io/npm/dm/@uni-helper/uni-env?colorA=005947&colorB=eee&style=for-the-badge" alt="downloads"></a>
   <a href="https://www.npmjs.com/package/@uni-helper/uni-env"><img src="https://img.shields.io/npm/v/@uni-helper/uni-env?colorA=005947&colorB=eee&style=for-the-badge" alt="version"></a>
 </p>
-
 <p style="text-align: center">
-  <a href="https://deepwiki.com/uni-helper/uni-env"><img src="https://deepwiki.com/badge.svg" alt="deepwiki"></a>
+  <a href="https://github.com/kejunmao"><img src="https://img.shields.io/badge/Author-KeJun-blue?style=for-the-badge" alt="Author"></a>
+  <a href="https://github.com/ModyQyW"><img src="https://img.shields.io/badge/Maintainer-ModyQyW-blue?style=for-the-badge" alt="Author"></a>
 </p>
 
 在 uni-app 中优雅地判断当前环境。
+
+不想看文档？直接问 AI 🤖 <a href="https://deepwiki.com/uni-helper/eslint-config"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
+
+> **请考虑持续[赞助](https://github.com/ModyQyW/sponsors)以维持该项目的持续健康发展，非常感谢！🙏**
 
 ## 安装
 
@@ -20,7 +24,7 @@ pnpm i @uni-helper/uni-env
 
 ## 使用
 
-📖 **请阅读[完整文档](https://uni-helper.js.org/uni-env)了解完整使用方法！**
+📖 **请阅读[完整文档](https://uni-helper.js.org/uni-env)了解完整使用方法。**
 
 ```ts
 import { appId, isMpWeixin, platform } from '@uni-helper/uni-env'
