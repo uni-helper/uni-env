@@ -2,7 +2,19 @@
   "name": "@uni-helper/uni-env",
   "type": "module",
   "version": "0.3.1",
-  "packageManager": "pnpm@10.34.4",
+  "packageManager": "pnpm@12.3.4",
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "26",
+      "onFail": "warn"
+    },
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.3.4",
+      "onFail": "warn"
+    }
+  },
   "description": "在 uni-app 中优雅地判断当前环境。",
   "author": "KeJun",
   "maintainers": [
@@ -47,23 +59,21 @@
     "dev": "tsdown --watch",
     "prepublishOnly": "pnpm build",
     "release": "bumpp",
-    "start": "esno src/index.ts",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "vitest run",
-    "check-types": "tsc --noEmit"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "std-env": "^3.10.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^9.1.0",
-    "@types/node": "^24.13.2",
-    "bumpp": "^11.1.0",
-    "eslint": "^10.5.0",
-    "esno": "^4.8.0",
-    "tsdown": "^0.22.3",
+    "@antfu/eslint-config": "^9.5.1",
+    "@types/node": "^26.4.1",
+    "bumpp": "^12.3.0",
+    "eslint": "^10.10.0",
+    "tsdown": "^0.22.14",
     "typescript": "^6.0.3",
-    "vitest": "^4.1.9"
+    "vitest": "^4.1.11"
   }
 }
