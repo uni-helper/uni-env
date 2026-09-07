@@ -4,8 +4,8 @@
 
 ## 前置条件
 
-- Node.js >= 18
-- pnpm >= 10.34.4（项目已通过 `packageManager` 字段固定版本）
+- Node.js 26（本地开发，见 `.node-version`；CI 会额外验证 22 / 24）
+- pnpm 12.3.4（项目已通过 `packageManager` 字段固定版本）
 - Git
 
 ## 仓库结构
@@ -17,7 +17,8 @@ uni-env/
 │   └── utils.ts     # toBoolean / parseJSON 工具函数
 ├── test/
 │   └── index.test.ts # 导出清单快照测试
-├── dist/            # 构建产物（发布到 npm 的内容）
+├── dist/            # 构建产物（发布到 npm 的内容，已 gitignore）
+├── AGENTS.md        # AI 编码代理的项目说明
 └── package.json
 ```
 
@@ -32,9 +33,9 @@ pnpm run build   # 生成 dist/
 ## 测试与检查
 
 ```bash
-pnpm run check-types   # tsc --noEmit
-pnpm run lint          # eslint
-pnpm run test          # vitest run
+pnpm run typecheck      # tsc --noEmit
+pnpm run lint           # eslint
+pnpm run test           # vitest run
 ```
 
 新增或删除导出时，`test/index.test.ts` 的内联快照会失败，用 `pnpm exec vitest run -u` 更新，并确认 diff 仅包含预期变更。

@@ -23,7 +23,7 @@ pnpm i @uni-helper/uni-env
 📖 **请阅读[完整文档](https://uni-helper.js.org/uni-env)了解完整使用方法！**
 
 ```ts
-import { isMpWeixin, platform, appId } from '@uni-helper/uni-env'
+import { appId, isMpWeixin, platform } from '@uni-helper/uni-env'
 ```
 
 :::tip 构建期而非运行时
