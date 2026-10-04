@@ -5,7 +5,7 @@
 ## 前置条件
 
 - Node.js 26（本地开发，见 `.node-version`；CI 会额外验证 22 / 24）
-- pnpm 12.3.4（项目已通过 `packageManager` 字段固定版本）
+- pnpm 12.8.1（项目已通过 `packageManager` 字段固定版本）
 - Git
 
 ## 仓库结构

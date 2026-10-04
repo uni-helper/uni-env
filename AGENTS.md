@@ -21,7 +21,7 @@ pnpm run test           # vitest run
 pnpm run typecheck      # tsc --noEmit
 ```
 
-本地环境：Node 26（见 `.node-version`）、pnpm 12.3.4（`packageManager` 字段固定）。测试直接跑 `src/`，不需要先 build；CI（`.github/workflows/ci.yml`）会在 Node 22/24/26 × 三系统上依次执行 build → lint → test → typecheck，提交前请在本地把后三项跑绿。
+本地环境：Node 26（见 `.node-version`）、pnpm 12.8.1（`packageManager` 字段固定）。测试直接跑 `src/`，不需要先 build；CI（`.github/workflows/ci.yml`）会在 Node 22/24/26 × 三系统上依次执行 build → lint → test → typecheck，提交前请在本地把后三项跑绿。
 
 ## 环境变量读取规则（核心约定）
 
