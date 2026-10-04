@@ -12,13 +12,23 @@
 
 ```
 uni-env/
+├── .github/
+│   └── workflows/      # ci.yml（三系统 × Node 22/24/26 矩阵）与 release.yml（tag 触发发布）
 ├── src/
-│   ├── index.ts     # 全部环境变量与平台判断导出
-│   └── utils.ts     # toBoolean / parseJSON 工具函数
+│   ├── index.ts        # 全部环境变量与平台判断导出
+│   └── utils.ts        # toBoolean / parseJSON 工具函数
 ├── test/
-│   └── index.test.ts # 导出清单快照测试
-├── dist/            # 构建产物（发布到 npm 的内容，已 gitignore）
-├── AGENTS.md        # AI 编码代理的项目说明
+│   └── index.test.ts   # 导出清单快照测试
+├── dist/               # 构建产物（发布到 npm 的内容，已 gitignore）
+├── banner.svg          # README 头图
+├── logo.svg            # README 徽标
+├── eslint.config.js    # ESLint 配置（@antfu/eslint-config，无 Prettier）
+├── tsdown.config.ts    # 构建配置（esm + cjs + dts）
+├── tsconfig.json       # TypeScript 配置（strict 模式）
+├── AGENTS.md           # AI 编码代理的项目说明
+├── CONTRIBUTING.md
+├── LICENSE
+├── README.md
 └── package.json
 ```
 
@@ -77,3 +87,23 @@ uni-app 的注册表在 `packages/uni-cli-shared/src/env/define.ts` 的 `initDef
 ## 重要提醒
 
 本库提供的是构建期注入的环境值，**不是运行时条件编译**。运行时通过 `import` 读取的常量在代码加载时已求值，无法像官方条件编译那样按平台裁掉整段代码。要做条件编译请使用官方的 [跨端兼容 - 条件编译](https://uniapp.dcloud.net.cn/tutorial/platform.html#preprocessor) 或 [unplugin-preprocessor-directives](https://github.com/KeJunMao/unplugin-preprocessor-directives)。
+
+## 提交规范
+
+1. Fork 本仓库并克隆到本地。
+2. 基于 `main` 创建功能分支：`feat/xxx`、`fix/xxx`、`docs/xxx` 等。
+3. 提交信息遵循 [Conventional Commits](https://www.conventionalcommits.org/) 格式（如 `feat: 暴露新的环境变量`，破坏性变更用 `feat!:`）。
+4. 提交前执行：
+   ```bash
+   pnpm run lint
+   pnpm run test
+   pnpm run typecheck
+   ```
+5. 推送到远端后发起 Pull Request，描述改动内容、测试结果与关联 Issue。
+
+## Pull Request 指南
+
+- 保持 PR 范围聚焦，一次只解决一个问题或新增一个特性。
+- 新增或删除导出时，同步更新 `README.md` 的使用示例，并按「测试与检查」的流程更新 `test/index.test.ts` 的内联快照。
+- 确保 CI 通过。CI 在 3 个系统（ubuntu / macos / windows）× Node 22 / 24 / 26 上运行 build、lint、test、typecheck。
+- 如需讨论方案，可在 Issue 中先行沟通。
