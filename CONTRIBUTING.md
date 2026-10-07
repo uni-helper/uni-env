@@ -5,7 +5,7 @@
 ## 前置条件
 
 - Node.js 26（本地开发，见 `.node-version`；CI 会额外验证 22 / 24）
-- pnpm 12.8.1（项目已通过 `packageManager` 字段固定版本）
+- pnpm 12.9.1（项目已通过 `packageManager` 字段固定版本）
 - Git
 
 ## 仓库结构
@@ -14,6 +14,8 @@
 uni-env/
 ├── .github/
 │   └── workflows/      # ci.yml（三系统 × Node 22/24/26 矩阵）与 release.yml（tag 触发发布）
+├── playground/         # uni-preset-vue 演示工程，通过 workspace:* 引用本库
+│   └── src/            # 页面与入口（App.vue、pages.json 等）
 ├── src/
 │   ├── index.ts        # 全部环境变量与平台判断导出
 │   └── utils.ts        # toBoolean / parseJSON 工具函数
@@ -23,8 +25,9 @@ uni-env/
 ├── banner.svg          # README 头图
 ├── logo.svg            # README 徽标
 ├── eslint.config.js    # ESLint 配置（@antfu/eslint-config，无 Prettier）
+├── pnpm-workspace.yaml # 工作区配置，全部依赖版本集中在 catalog 里管理
 ├── tsdown.config.ts    # 构建配置（esm + cjs + dts）
-├── tsconfig.json       # TypeScript 配置（strict 模式）
+├── tsconfig.json       # TypeScript 配置（strict 模式，不含 playground）
 ├── AGENTS.md           # AI 编码代理的项目说明
 ├── CONTRIBUTING.md
 ├── LICENSE
@@ -40,10 +43,20 @@ pnpm run dev     # 监听模式构建
 pnpm run build   # 生成 dist/
 ```
 
+playground（H5 演示工程，通过 `workspace:*` 引用本库的 `dist/` 产物）：
+
+```bash
+pnpm --filter uni-preset-vue run dev:h5     # 开发服务器
+pnpm --filter uni-preset-vue run build:h5   # 生产构建
+```
+
+改了 `src/` 之后先 `pnpm run build`（或开着 `pnpm run dev`）再跑 playground，否则它拿到的是旧的 dist 产物。
+
 ## 测试与检查
 
 ```bash
-pnpm run typecheck      # tsc --noEmit
+pnpm run typecheck      # tsc --noEmit（根 tsconfig 已排除 playground）
+pnpm --filter uni-preset-vue run type-check   # playground 的 vue-tsc --noEmit
 pnpm run lint           # eslint
 pnpm run test           # vitest run
 ```

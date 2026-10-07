@@ -2,10 +2,10 @@
 
 ## 项目概述
 
-`@uni-helper/uni-env`：在 uni-app 中优雅地判断当前环境。构建期环境库，依赖 uni-app 在构建时通过 Vite `define` 对 `process.env.*` 字面量做静态替换。单包仓库，核心只有两个文件：
+`@uni-helper/uni-env`：在 uni-app 中优雅地判断当前环境。构建期环境库，依赖 uni-app 在构建时通过 Vite `define` 对 `process.env.*` 字面量做静态替换。pnpm 工作区，两个成员：
 
-- `src/index.ts` —— 全部环境变量与平台判断导出（唯一入口）
-- `src/utils.ts` —— `toBoolean` / `parseJSON` 工具函数
+- 根：库本体。核心只有两个文件——`src/index.ts`（全部环境变量与平台判断导出，唯一入口）、`src/utils.ts`（`toBoolean` / `parseJSON` 工具函数）
+- `playground/`：uni-preset-vue 演示工程，通过 `workspace:*` 引用本库；本库的对外产物是 `dist/`，调试 playground 前先 build
 
 `dist/` 为构建产物，已 gitignore，不入库。
 
@@ -18,10 +18,17 @@ pnpm run build          # 构建 dist/（esm + cjs + dts）
 pnpm run lint           # eslint 检查
 pnpm run lint:fix       # eslint 自动修复
 pnpm run test           # vitest run
-pnpm run typecheck      # tsc --noEmit
+pnpm run typecheck      # tsc --noEmit（根 tsconfig 已排除 playground）
+pnpm -C playground run dev:h5      # playground H5 开发服务器
+pnpm -C playground run build:h5    # playground H5 生产构建
+pnpm -C playground run type-check  # playground 的 vue-tsc --noEmit
 ```
 
-本地环境：Node 26（见 `.node-version`）、pnpm 12.8.1（`packageManager` 字段固定）。测试直接跑 `src/`，不需要先 build；CI（`.github/workflows/ci.yml`）会在 Node 22/24/26 × 三系统上依次执行 build → lint → test → typecheck，提交前请在本地把后三项跑绿。
+本地环境：Node 26（见 `.node-version`）、pnpm 12.9.1（`packageManager` 字段固定）。测试直接跑 `src/`，不需要先 build；CI（`.github/workflows/ci.yml`）会在 Node 22/24/26 × 三系统上依次执行 build → lint → test → typecheck，提交前请在本地把后三项跑绿。
+
+## 依赖管理
+
+所有依赖版本集中在 `pnpm-workspace.yaml` 的 `catalog:` 里，根和 `playground/package.json` 一律写 `catalog:` 协议引用。升级或新增依赖改 catalog，直接改 package.json 里的版本号无效（那里没有版本信息）。改完跑 `pnpm install` 重新生成 lockfile。catalog 键按 ASCII 升序排列，`yaml/sort-keys` 会拦乱序。
 
 ## 环境变量读取规则（核心约定）
 
@@ -40,7 +47,7 @@ pnpm run typecheck      # tsc --noEmit
 
 ## 代码风格
 
-- ESLint 用 `@antfu/eslint-config` 默认规则（见 `eslint.config.js`），不使用 Prettier；风格问题一律交给 `pnpm run lint:fix`。
+- ESLint 用 `@antfu/eslint-config`（`type: 'lib'`，关闭了 `pnpm/yaml-enforce-settings`，见 `eslint.config.js`），不使用 Prettier；风格问题一律交给 `pnpm run lint:fix`。
 - TypeScript strict 模式（`tsconfig.json`）。
 - 修改后运行 `pnpm run lint && pnpm run test && pnpm run typecheck`，全绿才算完成。
 
