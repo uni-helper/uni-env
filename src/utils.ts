@@ -1,8 +1,8 @@
-export function toBoolean(val: boolean | string | undefined) {
+export function toBoolean(val: boolean | string | undefined): boolean {
   return val ? val !== 'false' : false
 }
 
-export function parseJSON<T>(val: any) {
+export function parseJSON<T>(val: any): T {
   let obj: T
   try {
     obj = JSON.parse(val || '{}') as T
