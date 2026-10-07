@@ -2,7 +2,7 @@
   "name": "@uni-helper/uni-env",
   "type": "module",
   "version": "0.3.1",
-  "packageManager": "pnpm@12.8.1",
+  "packageManager": "pnpm@12.9.1",
   "devEngines": {
     "runtime": {
       "name": "node",
@@ -11,7 +11,7 @@
     },
     "packageManager": {
       "name": "pnpm",
-      "version": "12.8.1",
+      "version": "12.9.1",
       "onFail": "warn"
     }
   },
@@ -57,6 +57,10 @@
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch",
+    "build:play:h5": "pnpm -C playground run build:h5",
+    "dev:play:h5": "pnpm -C playground run dev:h5",
+    "build:play:mp-weixin": "pnpm -C playground run build:mp-weixin",
+    "dev:play:mp-weixin": "pnpm -C playground run dev:mp-weixin",
     "prepublishOnly": "pnpm build",
     "release": "bumpp",
     "lint": "eslint .",
@@ -65,15 +69,15 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "std-env": "^3.10.0"
+    "std-env": "catalog:"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^9.5.1",
-    "@types/node": "^26.6.3",
-    "bumpp": "^12.3.0",
-    "eslint": "^10.11.0",
-    "tsdown": "^0.22.14",
-    "typescript": "^6.0.3",
-    "vitest": "^4.1.11"
+    "@antfu/eslint-config": "catalog:",
+    "@types/node": "catalog:",
+    "bumpp": "catalog:",
+    "eslint": "catalog:",
+    "tsdown": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
   }
 }
