@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 256 256">
-  <rect width="256" height="256" rx="48" fill="#000000" />
+  <title>uni-env logo</title>
   <g fill="none" stroke="#00D4AA" stroke-width="7" stroke-linecap="round" stroke-linejoin="miter">
     <path d="M 46 54 L 76 54 L 99 28 L 122 80 L 145 28 L 168 80 L 191 28 L 214 54" opacity="0.5" />
     <path d="M 26 128 L 62 128 L 91 88 L 120 168 L 149 88 L 178 168 L 207 88 L 230 128" />
