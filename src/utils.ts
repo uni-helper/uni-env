@@ -1,5 +1,7 @@
 export function toBoolean(val: boolean | string | undefined): boolean {
-  return val ? val !== 'false' : false
+  return val
+    ? val !== 'false'
+    : false
 }
 
 export function parseJSON<T>(val: any): T {

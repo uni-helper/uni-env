@@ -14,7 +14,7 @@ allowBuilds:
   esbuild: true
 
 catalog:
-  '@antfu/eslint-config': ^9.5.1
+  '@antfu/eslint-config': ^10.0.0
   '@dcloudio/types': ^3.4.32
   '@dcloudio/uni-app': 3.0.0-5020420260813003
   '@dcloudio/uni-app-harmony': 3.0.0-5020420260813003
@@ -36,16 +36,16 @@ catalog:
   '@dcloudio/uni-quickapp-webview': 3.0.0-5020420260813003
   '@dcloudio/uni-stacktracey': 3.0.0-5020420260813003
   '@dcloudio/vite-plugin-uni': 3.0.0-5020420260813003
-  '@types/node': ^26.6.4
+  '@types/node': ^26.6.6
   '@vue/runtime-core': ~3.4.38
   '@vue/tsconfig': ^0.9.1
   bumpp: ^12.3.0
-  eslint: ^10.12.0
+  eslint: ^10.14.0
   std-env: ^3.10.0
-  tsdown: ^0.22.14
+  tsdown: ^0.23.4
   typescript: ^6.0.3
   vite: ^5.4.21
-  vitest: ^4.1.11
+  vitest: ^4.1.12
   vue: ~3.4.38
   vue-i18n: ~9.1.9
-  vue-tsc: ^3.3.12
+  vue-tsc: ^3.3.14

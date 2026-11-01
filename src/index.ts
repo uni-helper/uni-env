@@ -31,7 +31,29 @@ export type OptionalString = string | undefined
  */
 export type BuiltInPlatform = 'h5' | 'web' | 'app' | 'app-plus' | 'app-android' | 'app-ios' | 'app-harmony' | 'mp-360' | 'mp-alipay' | 'mp-baidu' | 'mp-qq' | 'mp-toutiao' | 'mp-weixin' | 'mp-kuaishou' | 'mp-lark' | 'mp-jd' | 'mp-xhs' | 'mp-harmony' | 'quickapp-webview' | 'quickapp-webview-huawei' | 'quickapp-webview-union'
 
-export const builtInPlatforms = ['h5', 'web', 'app', 'app-plus', 'app-android', 'app-ios', 'app-harmony', 'mp-360', 'mp-alipay', 'mp-baidu', 'mp-qq', 'mp-toutiao', 'mp-weixin', 'mp-kuaishou', 'mp-lark', 'mp-jd', 'mp-xhs', 'mp-harmony', 'quickapp-webview', 'quickapp-webview-huawei', 'quickapp-webview-union'] as BuiltInPlatform[]
+export const builtInPlatforms = [
+  'h5',
+  'web',
+  'app',
+  'app-plus',
+  'app-android',
+  'app-ios',
+  'app-harmony',
+  'mp-360',
+  'mp-alipay',
+  'mp-baidu',
+  'mp-qq',
+  'mp-toutiao',
+  'mp-weixin',
+  'mp-kuaishou',
+  'mp-lark',
+  'mp-jd',
+  'mp-xhs',
+  'mp-harmony',
+  'quickapp-webview',
+  'quickapp-webview-huawei',
+  'quickapp-webview-union',
+] as BuiltInPlatform[]
 
 /**
  * `process.env.UNI_PLATFORM`
@@ -100,7 +122,9 @@ export const utsPlatform = env.UNI_UTS_PLATFORM as UtsPlatform
 export const isH5 = platform === 'h5' || platform === 'web'
 
 /** Get user agent string for browser detection */
-const userAgent = typeof navigator !== 'undefined' ? navigator.userAgent.toLowerCase() : ''
+const userAgent = typeof navigator !== 'undefined'
+  ? navigator.userAgent.toLowerCase()
+  : ''
 
 /** Detect if running in WeChat browser in H5 environment */
 export const isH5Weixin = isH5 && /micromessenger/i.test(userAgent)

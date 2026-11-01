@@ -2,7 +2,7 @@
   "name": "@uni-helper/uni-env",
   "type": "module",
   "version": "0.3.3",
-  "packageManager": "pnpm@12.9.1",
+  "packageManager": "pnpm@12.16.1",
   "devEngines": {
     "runtime": {
       "name": "node",
@@ -11,7 +11,7 @@
     },
     "packageManager": {
       "name": "pnpm",
-      "version": "12.9.1",
+      "version": "12.16.1",
       "onFail": "warn"
     }
   },
