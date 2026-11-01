@@ -1,11 +1,11 @@
 # 参与贡献
 
-感谢你对 `@uni-helper/uni-env` 的关注！本文档说明仓库结构、本地开发流程，以及本库最重要的约定——环境变量的读取规则。
+感谢你对 `@uni-helper/uni-env` 的关注！本文档说明仓库结构、本地开发流程，以及本库最重要的约定：环境变量的读取规则。
 
 ## 前置条件
 
 - Node.js 26（本地开发，见 `.node-version`；CI 会额外验证 22 / 24）
-- pnpm 12.9.1（项目已通过 `packageManager` 字段固定版本）
+- pnpm 12.16.1（项目已通过 `packageManager` 字段固定版本）
 - Git
 
 ## 仓库结构
@@ -65,13 +65,13 @@ pnpm run test           # vitest run
 
 ## 环境变量读取规则（核心约定）
 
-本库是构建时环境库，依赖 uni-app 在构建期通过 Vite `define` 对 `process.env.*` 字面量做静态替换。读取方式必须按以下规则区分，写错会导致取不到值或运行时报错。
+本库是构建期环境库，依赖 uni-app 在构建期通过 Vite `define` 对 `process.env.*` 字面量做静态替换。读取方式必须按以下规则区分，写错会导致取不到值或运行时报错。
 
 uni-app 的注册表在 `packages/uni-cli-shared/src/env/define.ts` 的 `initDefine()`，每次升级 uni-app 后应对照该文件重新核查本库的导出。
 
 ### 已注册的键 → 用 `process.env.X`
 
-构建期被替换为字面量，所有目标（Node / H5 / 小程序）都能拿到正确值，且能触发 dead-code elimination——其它平台的分支会被打包器裁掉。这是本库能实现「按平台 tree-shaking」的基础。
+构建期被替换为字面量，所有目标（Node / H5 / 小程序）都能拿到正确值，且能触发 dead-code elimination，其它平台的分支会被打包器裁掉。这是本库能实现「按平台 tree-shaking」的基础。
 
 ### 未注册的键 → 用 `env.X`（来自 `std-env`）
 
@@ -117,6 +117,6 @@ uni-app 的注册表在 `packages/uni-cli-shared/src/env/define.ts` 的 `initDef
 ## Pull Request 指南
 
 - 保持 PR 范围聚焦，一次只解决一个问题或新增一个特性。
-- 新增或删除导出时，同步更新 `README.md` 的使用示例，并按「测试与检查」的流程更新 `test/index.test.ts` 的内联快照。
-- 确保 CI 通过。CI 在 3 个系统（ubuntu / macos / windows）× Node 22 / 24 / 26 上运行 build、lint、test、typecheck。
+- 新增或删除导出时，确认 `README.md` 的示例仍然有效，并按「测试与检查」的流程更新 `test/index.test.ts` 的内联快照。
+- 确保 CI 通过。CI 在 3 个系统（ubuntu / macos / windows）× Node 22 / 24 / 26 上运行 build、lint、test、typecheck，并构建 playground 的 h5 与 mp-weixin 产物。
 - 如需讨论方案，可在 Issue 中先行沟通。
